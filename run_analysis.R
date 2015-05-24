@@ -39,7 +39,7 @@ for(i in 1:nrow(sel_mergedData)){
 }
 
 # Appropriately label the data set with descriptive variable names 
-# already done in lines 13-20
+# already done in lines 17-24
 # see codebook for additional explanation of varaible names
 
 # Create a second, independent tidy data set with the average
