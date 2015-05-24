@@ -86,11 +86,11 @@ Once the data has been downloaded and unzipped, eight txt files are loaded by th
 Descriptive column names are given to each data set:
 - "Subject" for the subject column
 - "Activity" for the activity column
-- the labels for the feature columns are extracted from the features.txt file. Since some of these variable names include invalid characters, valid_column_makes is created with make.names().
+- the labels for the feature columns are extracted from the features.txt file. Since some of these variable names include invalid characters, valid_column_names is created with make.names().
 
 The train and test data sets are merged to form one data set. First, the subject, y and X data sets belonging to the same subset (train or test) are merged together using cbind. The two resulting data sets are merged together using rbind.
 
-The dplyr packaged is used to select only those variables which contain 'mean' and 'standard deviation' for each measurement. It's ambiguous whether variables such as 'gravityMean' should be included here, they are kept for completeness. In total 88 variables are selected, including "Subject", "Activity" and 86 features.
+The dplyr packaged is used to select only those variables which contain 'mean' and 'standard deviation' for each measurement. It's ambiguous whether variables such as 'gravityMean' should be included here, they are kept for completeness. In total 88 variables are selected out of the possible 563, including "Subject", "Activity" and 86 features.
 
 The Activity column at this point contains an index from 1 to 6. A more descriptive entry can be achieved by matching this index to the activities data frame, and replacing the index with the corresponding activity (walking, sitting etc).
 
